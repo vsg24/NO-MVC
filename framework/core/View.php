@@ -13,8 +13,10 @@ class View
             $approot,
             $approot . 'areas' // Recommended naming convention
         ]);
+        
         $this->twig = new \Twig_Environment($loader, [
-            'cache' => getProjectRoot(true) . 'cache/views',
+            'cache' => (TWIG_CACHE === true ? getProjectRoot(true) . 'cache/views' : false),
+            'debug' => TWIG_DEBUG
         ]);
     }
 
@@ -26,5 +28,10 @@ class View
         }
 
         echo $this->twig->render($pathToTemplate, $additionalData);
+    }
+
+    public static function toView($view) : View
+    {
+        return $view;
     }
 }

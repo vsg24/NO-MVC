@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "e2900dddcd32aa013f9d4c0c26561744",
-    "content-hash": "542663a4a7850cc65e7b94dde67a3d66",
+    "hash": "e03f8fc433d6d2ada547ecfa5b4420d9",
+    "content-hash": "bb4f8e4626dc6ae7a539a248a997943f",
     "packages": [
         {
             "name": "altorouter/altorouter",
@@ -61,6 +61,59 @@
                 "routing"
             ],
             "time": "2015-11-30 00:47:43"
+        },
+        {
+            "name": "aura/sql",
+            "version": "2.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/auraphp/Aura.Sql.git",
+                "reference": "842ea73ed132dcee8c0a3a896aae57c01568782f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/auraphp/Aura.Sql/zipball/842ea73ed132dcee8c0a3a896aae57c01568782f",
+                "reference": "842ea73ed132dcee8c0a3a896aae57c01568782f",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "aura": {
+                    "type": "library"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Aura\\Sql\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-2-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Aura.Sql Contributors",
+                    "homepage": "https://github.com/auraphp/Aura.Sql/contributors"
+                }
+            ],
+            "description": "A PDO extension that provides lazy connections, array quoting, identifier quoting, query profiling, value binding, and convenience methods for common fetch styles. Because it extends PDO, existing code that uses PDO can use this without any changes to the existing code.",
+            "homepage": "https://github.com/auraphp/Aura.Sql",
+            "keywords": [
+                "mysql",
+                "pdo",
+                "pgsql",
+                "postgres",
+                "postgresql",
+                "sql server",
+                "sqlite",
+                "sqlserver",
+                "sqlsrv"
+            ],
+            "time": "2016-05-01 14:56:48"
         },
         {
             "name": "twig/twig",
@@ -130,6 +183,8 @@
     "stability-flags": [],
     "prefer-stable": false,
     "prefer-lowest": false,
-    "platform": [],
+    "platform": {
+        "php": ">=7.0.0"
+    },
     "platform-dev": []
 }

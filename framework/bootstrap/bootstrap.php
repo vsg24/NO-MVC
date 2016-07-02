@@ -16,5 +16,17 @@ require_once __DIR__ . '/../../vendor/autoload.php';
 require_once  __DIR__ . '/../registerFunctions.php';
 require_once __DIR__ . '/../../config/config.php';
 
-// Instantiate the View engine core
-$view = new NOMVC\Core\View();
+/**
+ * Returns an associative array containing app service objects
+ *
+ * @return array
+ */
+function getAppServices()
+{
+    // Instantiate the View engine core
+    $view = new NOMVC\Core\View();
+    // Instantiate the Database engine core
+    $database = new NOMVC\Core\Database();
+
+    return ['view' => $view, 'database' => $database];
+}

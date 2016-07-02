@@ -12,13 +12,16 @@ This project is a WiP. Documentation is not ready.
 **Features:**
 * Routing (AltoRouter)
 * Templates (Twig)
+* Database access helper (Aura.Sql based on PDO)
 * Caching
 * Improved security by separating the document root directory
 * Plenty of common useful functions
 * Fast and lightweight (Core framework size is under **100 KB**)
 
+Using PhpStorm 2016+ by JetBrains you will experience near **PERFECT**  intellisense thanks to the PHP 7 type hinting and consideration in the code base
+
 **Requirements:**
-* PHP 7+ (PHP 5.6.X may work but it's  **not**  recommended)
+* PHP 7.0+
 * Ability to change document root of your web server
 * Ability to redirect all non static requests to `wwwroot/index.php` (`.htaccess` and `web.config` files are already included)
 
