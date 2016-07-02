@@ -12,6 +12,12 @@
 .idea/vcs.xml
 .idea/jsLibraryMappings.xml
 
+# Composer Libs
+vendor
+
+# Cache files
+cache/views
+
 # Sensitive or high-churn files:
 .idea/dataSources.ids
 .idea/dataSources.xml

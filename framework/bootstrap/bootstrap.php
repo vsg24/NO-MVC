@@ -15,3 +15,6 @@
 require_once __DIR__ . '/../../vendor/autoload.php';
 require_once  __DIR__ . '/../registerFunctions.php';
 require_once __DIR__ . '/../../config/config.php';
+
+// Instantiate the View engine core
+$view = new NOMVC\Core\View();

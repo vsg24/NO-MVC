@@ -1,4 +1,3 @@
 <?php
 
-
-const AREAS = ['Front', 'Admin'];
+const AREAS_DIR = ['admin' => 'areas/admin', 'front' => 'areas/front'];
