@@ -18,6 +18,9 @@ vendor
 # Cache files
 cache/views
 
+# Node.JS modules
+node_modules
+
 # Sensitive or high-churn files:
 .idea/dataSources.ids
 .idea/dataSources.xml

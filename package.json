@@ -1,0 +1,30 @@
+{
+  "name": "no-mvc",
+  "version": "1.0.0",
+  "description": "_Sometimes you don't need MVC_",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/VSG24/NO-MVC.git"
+  },
+  "author": "Vahid Amiri Motlagh <vahid.a1996@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/VSG24/NO-MVC/issues"
+  },
+  "homepage": "https://github.com/VSG24/NO-MVC#readme",
+  "dependencies": {
+    "jquery": "^3.0.0"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-concat": "^2.6.0",
+    "gulp-cssmin": "^0.1.7",
+    "gulp-rename": "^1.2.2",
+    "gulp-uglify": "^1.5.4",
+    "rimraf": "^2.5.2"
+  }
+}

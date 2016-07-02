@@ -1,6 +1,6 @@
 {
     "name": "vsg24/no-mvc",
-    "version": "0.2.0",
+    "version": "0.2.5",
     "description": "A PHP framework for non believers",
     "keywords": ["framework", "php7", "no-mvc", "old-school", "fast", "standard", "routing", "lightweight"],
     "homepage": "https://github.com/vsg24/NO-MVC",
