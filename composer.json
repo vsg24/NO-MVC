@@ -1,0 +1,20 @@
+{
+    "name": "vsg24/no-mvc",
+    "version": "0.0.1",
+    "description": "A simple PHP framework for non believers",
+    "keywords": ["framework", "php7", "no-mvc", "old-school", "fast", "standard", "routing", "lightweight"],
+    "homepage": "https://github.com/vsg24/NO-MVC",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Vahid Amiri Motlagh",
+            "email": "vahid.a1996@gmail.com",
+            "homepage": "http://atvsg.com/"
+        }
+    ],
+    "require": {
+        "php": ">=7.0.1",
+        "altorouter/altorouter": "^1.2",
+        "twig/twig": "^1.24"
+    }
+}
