@@ -18,7 +18,7 @@ This project is a WiP. Documentation is not ready.
 * Plenty of common useful functions
 * Fast and lightweight (Core framework size is under **100 KB**)
 
-Using PhpStorm 2016+ by JetBrains you will experience near **PERFECT**  intellisense thanks to the PHP 7 type hinting and consideration in the code base
+Using PhpStorm 2016+ by JetBrains you will experience near **PERFECT**  intellisense thanks to the PHP 7 type hinting and consideration in the code base. In order to get correct intellisense for css and js imports read <a href="https://www.jetbrains.com/help/phpstorm/2016.1/configuring-folders-within-a-content-root.html">this article</a>
 
 **Requirements:**
 * PHP 7.0+

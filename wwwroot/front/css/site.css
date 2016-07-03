@@ -1,0 +1,32 @@
+body {
+    text-align: center;
+    background-color: #8892BF;
+}
+h1, h2 {
+    font-family: 'Montserrat', sans-serif;
+}
+p, small, strong, em {
+    font-family: 'Ubuntu', sans-serif;
+}
+.content-header {
+    margin-top: 20%;
+}
+.content-header .title a {
+    text-decoration: none;
+    color: #333333;
+}
+.content-main {
+    padding: 2em;
+    background-color: #F2F2F2;
+}
+.congrats {
+    color: #DD0000;
+}
+.content-footer {
+    padding: 1em;
+    background-color: #333333;
+    color: #cccccc;
+}
+.content-footer a {
+    color: #99CC99;
+}
