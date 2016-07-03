@@ -20,26 +20,35 @@ var adminPaths = {
     webroot: wwwroot + "admin/"
 };
 
-adminPaths.js = adminPaths.webroot + "js/**/*.js";
-adminPaths.minJs = adminPaths.webroot + "js/";
-adminPaths.css = adminPaths.webroot + "css/**/*.css";
-adminPaths.minCss = adminPaths.webroot + "css/";
+adminPaths.jsPath = adminPaths.webroot + "js/";
+adminPaths.jsFiles = adminPaths.jsPath + "**/*.js";
+adminPaths.cssPath = adminPaths.webroot + "css/";
+adminPaths.cssFiles = adminPaths.cssPath + "**/*.css";
+
+gulp.task("adminClean:css", function (cb) {
+    rimraf(adminPaths.cssPath + "**/*.min.css", cb);
+});
+
+gulp.task("adminClean:js", function (cb) {
+    rimraf(adminPaths.jsPath + "**/*.min.js", cb);
+});
 
 gulp.task("adminMin:js", function () {
-    return gulp.src(adminPaths.js)
+    return gulp.src(adminPaths.jsFiles)
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(adminPaths.minJs));
+        .pipe(gulp.dest(adminPaths.jsPath));
 });
 
 gulp.task("adminMin:css", function () {
-    return gulp.src(adminPaths.css)
+    return gulp.src(adminPaths.cssFiles)
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(adminPaths.minCss));
+        .pipe(gulp.dest(adminPaths.cssPath));
 });
 
-gulp.task("adminMin", ["adminMin:js", "adminMin:css"]);
+// If you get events.js:160 Unhandled 'error' event, just run the task again
+gulp.task("adminMin", ["adminClean:js", "adminMin:js", "adminClean:css", "adminMin:css"]);
 
 // admin area rules end
 
@@ -47,26 +56,35 @@ var frontPaths = {
     webroot: "./wwwroot/front/"
 };
 
-frontPaths.js = frontPaths.webroot + "js/**/*.js";
-frontPaths.minJs = frontPaths.webroot + "js/";
-frontPaths.css = frontPaths.webroot + "css/**/*.css";
-frontPaths.minCss = frontPaths.webroot + "css/";
+frontPaths.jsPath = frontPaths.webroot + "js/";
+frontPaths.jsFiles = frontPaths.jsPath + "**/*.js";
+frontPaths.cssPath = frontPaths.webroot + "css/";
+frontPaths.cssFiles = frontPaths.cssPath + "**/*.css";
+
+gulp.task("frontClean:css", function (cb) {
+    rimraf(frontPaths.cssPath + "**/*.min.css", cb);
+});
+
+gulp.task("frontClean:js", function (cb) {
+    rimraf(frontPaths.jsPath + "**/*.min.js", cb);
+});
 
 gulp.task("frontMin:js", function () {
-    return gulp.src(frontPaths.js)
+    return gulp.src(frontPaths.jsFiles)
         .pipe(uglify())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(frontPaths.minJs));
+        .pipe(gulp.dest(frontPaths.jsPath));
 });
 
 gulp.task("frontMin:css", function () {
-    return gulp.src(frontPaths.css)
+    return gulp.src(frontPaths.cssFiles)
         .pipe(cssmin())
         .pipe(rename({suffix: '.min'}))
-        .pipe(gulp.dest(frontPaths.minCss));
+        .pipe(gulp.dest(frontPaths.cssPath));
 });
 
-gulp.task("frontMin", ["frontMin:js", "frontMin:css"]);
+// If you get events.js:160 Unhandled 'error' event, just run the task again
+gulp.task("frontMin", ["frontClean:js", "frontMin:js", "frontClean:css", "frontMin:css"]);
 
 // Copy the selected modules in "node_modules_to_copy" array to "lib" folder in public area
 gulp.task('copySelectedNodeModules', function () {

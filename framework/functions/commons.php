@@ -63,46 +63,6 @@ function isIncluded($filename)
 }
 
 /**
- * Generates a hashed string for the passed password using PHP's internal password_hash()
- *
- * @param string $password
- * @return bool|string
- */
-function passwordHash($password)
-{
-    $hash = password_hash($password, PASSWORD_DEFAULT);
-    return $hash;
-}
-
-/**
- * Checks whether the provided password matches the provided hash string
- *
- * @param string $password
- * @param string $hash
- * @return bool
- */
-function passwordVerify($password, $hash)
-{
-    $stat = password_verify($password, $hash);
-    return $stat ? true : false;
-}
-
-/**
- * Checks whether the first passed hash string is equal to the second passed hash string
- *
- * @param string $hashed_input
- * @param string $hashed_password
- * @return bool
- */
-function hashedPasswordVerify($hashed_input, $hashed_password)
-{
-    if($hashed_input === $hashed_password)
-        return true;
-    else
-        return false;
-}
-
-/**
  * Escapes single quotes in the passed string
  *
  * @param string $str
