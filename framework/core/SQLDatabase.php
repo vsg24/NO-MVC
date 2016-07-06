@@ -5,10 +5,17 @@ namespace NOMVC\Core;
 use Aura\Sql\ExtendedPdo;
 use Aura\Sql\ConnectionLocator;
 
-class Database
+/**
+ * Provides a connection to the SQL database specified in the config file.
+ * Makes use of Aura.SQL "Extended PDO" library
+ *
+ * Class SQLDatabase
+ * @package NOMVC\Core
+ */
+class SQLDatabase
 {
     public $connections;
-    public $db;
+    public $dbConn;
 
     public function __construct()
     {
@@ -23,7 +30,7 @@ class Database
         });
 
         // Uncomment and configure if you want to use different connections for read/write
-        
+
 //        // the write (master) server
 //        $connections->setWrite('master', function () {
 //            return new ExtendedPdo(
@@ -45,7 +52,7 @@ class Database
         $this->db = $this->connections->getDefault();
     }
 
-    public static function toDatabase($database) : Database
+    public static function toSQLDatabase($database) : SQLDatabase
     {
         return $database;
     }

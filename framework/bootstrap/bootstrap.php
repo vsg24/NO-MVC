@@ -25,8 +25,17 @@ function getAppServices()
 {
     // Instantiate the View engine core
     $view = new NOMVC\Core\View();
-    // Instantiate the Database engine core
-    $database = new NOMVC\Core\Database();
 
-    return ['view' => $view, 'database' => $database];
+    $dbConn = null;
+    if(DB_TYPE == 'PDO')
+    {
+        // Instantiate the SQLDatabase engine core
+        $dbConn = new NOMVC\Core\SQLDatabase();
+    }
+    elseif(DB_TYPE == 'MongoDB')
+    {
+        $dbConn = new NOMVC\Core\MongoDatabase();
+    }
+
+    return ['view' => $view, 'database' => $dbConn];
 }
