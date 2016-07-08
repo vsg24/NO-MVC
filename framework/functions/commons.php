@@ -73,6 +73,13 @@ function escapeSingleQuotes($str)
     return str_replace("'", "\\'", $str);
 }
 
+/**
+ * Performs a cast
+ *
+ * @param $destination
+ * @param \stdClass $source
+ * @return mixed
+ */
 function cast($destination, \stdClass $source)
 {
     $sourceReflection = new \ReflectionObject($source);
@@ -82,4 +89,64 @@ function cast($destination, \stdClass $source)
         $destination->{$name} = $source->$name;
     }
     return $destination;
+}
+
+/**
+ * Checks whether the current request is using HTTP GET verb
+ *
+ * @return bool
+ */
+function isGet() : bool
+{
+    if($_SERVER['REQUEST_METHOD'] === 'GET')
+    {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * Checks whether the current request is using HTTP POST verb
+ *
+ * @return bool
+ */
+function isPost() : bool
+{
+    if($_SERVER['REQUEST_METHOD'] === 'POST')
+    {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * Checks whether the current request is using HTTP DELETE verb
+ *
+ * @return bool
+ */
+function isDelete() : bool
+{
+    if($_SERVER['REQUEST_METHOD'] === 'DELETE')
+    {
+        return true;
+    }
+    return false;
+}
+
+/**
+ * Checks whether the current request is secured by HTTPS
+ *
+ * @return bool
+ */
+function isSsl() : bool
+{
+    if ( isset($_SERVER['HTTPS']) ) {
+        if ( 'on' == strtolower($_SERVER['HTTPS']) )
+            return true;
+        if ( '1' == $_SERVER['HTTPS'] )
+            return true;
+    } elseif ( isset($_SERVER['SERVER_PORT']) && ( '443' == $_SERVER['SERVER_PORT'] ) ) {
+        return true;
+    }
+    return false;
 }

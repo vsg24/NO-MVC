@@ -16,9 +16,7 @@
     "url": "https://github.com/VSG24/NO-MVC/issues"
   },
   "homepage": "https://github.com/VSG24/NO-MVC#readme",
-  "dependencies": {
-    "jquery": "^3.0.0"
-  },
+  "dependencies": {},
   "devDependencies": {
     "gulp": "^3.9.1",
     "gulp-concat": "^2.6.0",

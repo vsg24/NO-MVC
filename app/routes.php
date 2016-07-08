@@ -25,7 +25,7 @@ $router = new AltoRouter();
 
  */
 
-$router->map('GET', '/', function() {
+$router->map('GET|POST', '/', function() {
     require_once getAppRoot(true) . AREAS_DIR['front'] . '/index.php';
 });
 

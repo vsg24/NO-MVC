@@ -14,7 +14,8 @@ var gulp = require("gulp"),
 
 var wwwroot = "./wwwroot/";
 var libDest = wwwroot + "lib/";
-var node_modules_to_copy = ['jquery'];
+// Include names of the node packages from /node_modules that you want copied to /wwwroot/libs
+var node_modules_to_copy = [];
 
 var adminPaths = {
     webroot: wwwroot + "admin/"
