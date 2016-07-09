@@ -120,20 +120,6 @@ function isPost() : bool
 }
 
 /**
- * Checks whether the current request is using HTTP DELETE verb
- *
- * @return bool
- */
-function isDelete() : bool
-{
-    if($_SERVER['REQUEST_METHOD'] === 'DELETE')
-    {
-        return true;
-    }
-    return false;
-}
-
-/**
  * Checks whether the current request is secured by HTTPS
  *
  * @return bool

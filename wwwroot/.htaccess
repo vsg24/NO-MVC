@@ -11,4 +11,5 @@
     RewriteRule ^ index.php [L]
 </IfModule>
 
+Header add Framework "NO-MVC - https://github.com/VSG24/NO-MVC"
 Header set Access-Control-Allow-Origin "*"
