@@ -6,7 +6,7 @@
 var gulp = require("gulp"),
     rimraf = require("rimraf"),
     concat = require("gulp-concat"),
-    cssmin = require("gulp-cssmin"),
+    cleanCSS  = require("gulp-clean-css"),
     rename = require("gulp-rename"),
     uglify = require("gulp-uglify");
 
@@ -14,7 +14,7 @@ var gulp = require("gulp"),
 
 var wwwroot = "./wwwroot/";
 var libDest = wwwroot + "lib/";
-// Include names of the node packages from /node_modules that you want copied to /wwwroot/libs
+// Include names of the node packages from /node_modules that you want copied to /wwwroot/lib
 var node_modules_to_copy = [];
 
 var adminPaths = {
@@ -43,7 +43,7 @@ gulp.task("adminMin:js", function () {
 
 gulp.task("adminMin:css", function () {
     return gulp.src(adminPaths.cssFiles)
-        .pipe(cssmin())
+        .pipe(cleanCSS())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(adminPaths.cssPath));
 });
@@ -79,7 +79,7 @@ gulp.task("frontMin:js", function () {
 
 gulp.task("frontMin:css", function () {
     return gulp.src(frontPaths.cssFiles)
-        .pipe(cssmin())
+        .pipe(cleanCSS())
         .pipe(rename({suffix: '.min'}))
         .pipe(gulp.dest(frontPaths.cssPath));
 });
