@@ -34,6 +34,17 @@ function getAppRoot($slash = false)
 }
 
 /**
+ * Returns the address of app code directory
+ *
+ * @param bool $slash
+ * @return string
+ */
+function getAppCode($slash = false)
+{
+    return getAppRoot(true) . 'code' . ($slash ? '/' : '');
+}
+
+/**
  * Redirects to the passed location by setting the header
  *
  * @param string $location
