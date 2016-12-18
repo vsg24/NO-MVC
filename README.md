@@ -6,7 +6,7 @@ _Sometimes you don't need MVC_
 
 NO-MVC framework is a solution for building small-medium sized applications without having to enforce MVC architecture and at the same time being able to utilize some of the goodies common in MVC frameworks such as routing, separated public folder, clean folder structure, etc..
 
-This project is a WiP. Documentation is not ready.
+This project is more like a predefined layout for PHP projects than a complete framework.
 <br>
 
 **Features:**
